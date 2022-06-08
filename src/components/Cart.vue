@@ -19,20 +19,24 @@
 </template>
 
 <script>
-    export default {
+export default {
+    data() {
+        return {
+            total: 0,
+            singlePrice: 0,
+        }
+    },
     props: ['items'],
     computed: {
         totalPrice() {
-            var total = 0;
-                this.items.forEach(item => {
-                    let splitted = item.price.split('$');
-                    let singlePrice = parseFloat(splitted[1]);
-                    // console.log(typeof total);
-                    // console.log(typeof singlePrice);
-                    total += singlePrice;
-                })
-                // console.log(total);
-            }
+            this.items.forEach((item, index) => {
+                let splitted = item.price.split('$');
+                this.singlePrice = parseFloat(splitted[1]);
+                this.total += this.singlePrice;
+                console.log(this.total);
+            })
+            return this.total;
+        }
     },
         // methods: {
         //     totalPrice() {

@@ -37,12 +37,12 @@ export default {
     return {
       items: [],
       carts: [
-        {
-          id: 1,
-          title: 'Motorbike',
-          price: '100',
+        // {
+        //   id: 1,
+        //   title: 'Motorbike',
+        //   price: '100',
 
-        }
+        // }
       ],
     }
   },
