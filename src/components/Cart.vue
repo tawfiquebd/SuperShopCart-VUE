@@ -32,33 +32,12 @@ export default {
             this.items.forEach((item, index) => {
                 let splitted = item.price.split('$');
                 this.singlePrice = parseFloat(splitted[1]);
-                this.total += this.singlePrice;
-                console.log(this.total);
             })
+            this.total += this.singlePrice;
             return this.total;
         }
     },
-        // methods: {
-        //     totalPrice() {
-        //         let total = 0;
-        //         this.items.forEach(item => {
-        //             let price = item.price;
-        //             let splitted = price.split('$');
-        //             let singlePrice = parseFloat(splitted[1]);
-        //             total = total + singlePrice;
-        //             // console.log(typeof total);
-        //             // console.log(typeof singlePrice);
-        //             // console.log(typeof splitted[1]);
-        //             // // console.log(typeof total);
-                    
-        //         })
-                
-        //         // console.log(typeof total);
-        //         // console.log(typeof total);
-        //         // return total;
-        //     }
-        // }
-    }
+}
 </script>
 
 <style>
